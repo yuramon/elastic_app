@@ -10,7 +10,7 @@
 </div>
 
 <div id="articles">
-  <% if @articles %>
+  <% if @articles.any? %>
     <% @articles.each do |article|  %>
       <div class="border border-secondary rounded-3">
         <%=  render :partial => "articles/article", :locals => { :article => article } %>
