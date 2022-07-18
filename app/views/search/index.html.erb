@@ -13,9 +13,9 @@
   <% if @articles %>
     <% @articles.each do |article|  %>
       <div class="border border-secondary rounded-3">
-        <%=  render article  %>
+        <%=  render :partial => "articles/article", :locals => { :article => article } %>
         <p class="m-2">
-          <%=  link_to "Show this article", article, class: 'btn btn-secondary'  %>
+          <%=  link_to "Show this article", "/articles/#{article.id}", class: 'btn btn-secondary'  %>
         </p>
       </div>
     <% end  %>

@@ -3,6 +3,10 @@
     <%= form.text_field :q, class: "form-control rounded", placeholder: "Search" %>
     <%= form.submit "Search", class: "btn btn-outline-primary"%>
   </div>
+  <div>
+    <%= form.check_box :fuzzy, class: "form-check-input" %>
+    <%= form.label :fuzzy, "Fuzzy search", class: "form-check-label" %>
+  </div>
 <% end %>
 
 

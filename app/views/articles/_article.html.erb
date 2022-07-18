@@ -1,4 +1,4 @@
-<div class="container" id="<%= dom_id article %>">
+<div class="container" id="<%="article_#{article.id}"%>">
   <h4>
     <strong>Title:</strong>
     <%= article.title %>
@@ -6,7 +6,6 @@
 
   <p>
     <strong>Body:</strong>
-    <%= article.body %>
+    <%= article.try(:dig, :highlight) ? article.dig(:highlight, 'body', 0)&.html_safe : article.body %>
   </p>
-
 </div>
