@@ -1,0 +1,12 @@
+default: &default
+  host: 'https://test-rails-app.es.us-central1.gcp.cloud.es.io/'
+  http:
+    user: 'elastic'
+    password: 'IGVSfzTM20tghZ5ZnkESIGM8'
+
+test:
+  <<: *default
+development:
+  <<: *default
+production:
+  <<: *default
