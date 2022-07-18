@@ -80,3 +80,7 @@ gem "elasticsearch-rails", "~> 7.2"
 gem "elasticsearch-persistence", "~> 7.2"
 
 gem "faker", "~> 2.21"
+
+group :production do
+  gem 'pg'
+end
